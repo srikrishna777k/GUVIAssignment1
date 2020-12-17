@@ -1,0 +1,21 @@
+Hypertext Transfer Protocol (HTTP) is a set of standards that allow internet users to exchange website information. There have been four HTTP iterations since its introduction in 1991.
+
+HTTP/2 was released in 2015 as a revision to the HTTP/1.1 protocol. It was derived from the SPDY protocol, to improve the online experience by speeding up page loads and reducing round-trip time (RTT), especially on resource-heavy web pages.
+
+HTTP/1.1 was the 3rd version of HTTP and the standard protocol for over 15 years. It introduced persistent connections for improved performance and laid the foundation for standard requests, such as GET, HEAD, PUT, and POST. As websites became more resource-intensive, HTTP/1.1’s limitations started showing. Specifically, its use of one outstanding request per TCP connection created significant overhead, slowing down page load times.
+
+In 2010, Google released the SPDY protocol as a way of modifying how HTTP handles requests and responses. Its focus was to reduce latency via TCP pipelining and providing mandatory compression, amongst other features. While HTTP/2 was initially modeled after SPDY, it was soon modified to include unique features, including a fixed header compression algorithm, (compared to SPDY’s dynamic stream-based compression). Following its release, Google announced that it would remove support for SPDY in favor of HTTP/2.
+
+The differences:
+
+HTTP/2 improved on HTTP/1.1 in a number of ways that allowed for faster content delivery and improved user experience, including:
+
+1) Binary protocols – Binary protocols consume less bandwidth, are more efficiently parsed and are less error-prone than the textual protocols used by HTTP/1.1. Additionally, they can better handle elements such as whitespace, capitalization and line endings.
+
+2) Multiplexing – HTTP/2 is multiplexed, i.e., it can initiate multiple requests in parallel over a single TCP connection. As a result, web pages containing several elements are delivered over one TCP connection. These capabilities solve the head-of-line blocking problem in HTTP/1.1, in which a packet at the front of the line blocks others from being transmitted.
+
+3) Header compression – HTTP/2 uses header compression to reduce the overhead caused by TCP’s slow-start mechanism.
+
+4) Server push – HTTP/2 servers push likely-to-be-used resources into a browser’s cache, even before they’re requested. This allows browsers to display content without additional request cycles.
+
+5) Increased security – Web browsers only support HTTP/2 via encrypted connections, increasing user and application security.
